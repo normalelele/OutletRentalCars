@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/Elementos de la solución/">
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="OutletRentalCars.API/OutletRentalCars.API.csproj" />
+  <Project Path="OutletRentalCars.Application/OutletRentalCars.Application.csproj" />
+  <Project Path="OutletRentalCars.Domain/OutletRentalCars.Domain.csproj" />
+  <Project Path="OutletRentalCars.Infrastructure/OutletRentalCars.Infrastructure.csproj" />
+  <Project Path="OutletRentalCars.Tests/OutletRentalCars.Tests.csproj" />
+</Solution>
