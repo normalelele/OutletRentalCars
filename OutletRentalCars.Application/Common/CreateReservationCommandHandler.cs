@@ -29,14 +29,14 @@ public class CreateReservationCommandHandler : IRequestHandler<CreateReservation
             throw new ArgumentException("Vehicle not found");
 
         if (!vehicle.IsAvailable())
-            throw new InvalidOperationException("Vehicle is not available");
+            throw new InvalidOperationException("El vehículo no está disponible");
 
         var requestDateRange = new DateRange(request.PickupDateTime, request.ReturnDateTime);
         var activeReservations = await _reservationRepository.GetActiveReservationsByVehicleIdAsync(request.VehicleId);
 
         bool hasConflict = activeReservations.Any(r => r.GetDateRange().OverlapsWith(requestDateRange));
         if (hasConflict)
-            throw new InvalidOperationException("Vehicle already has a reservation for the selected dates");
+            throw new InvalidOperationException("El vehículo ya tiene una reserva para las fechas seleccionadas");
       
         var reservation = new Reservation(
             request.VehicleId,

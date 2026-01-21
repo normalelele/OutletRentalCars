@@ -15,9 +15,6 @@ public class ReservationsController : ControllerBase
         _mediator = mediator;
     }
 
-    /// <summary>
-    /// Create a new vehicle reservation
-    /// </summary>
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]

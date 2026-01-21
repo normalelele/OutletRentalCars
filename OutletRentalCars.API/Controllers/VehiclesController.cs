@@ -15,9 +15,6 @@ public class VehiclesController : ControllerBase
         _mediator = mediator;
     }
 
-    /// <summary>
-    /// Search available vehicles based on pickup/return locations and dates
-    /// </summary>
     [HttpGet("search")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]

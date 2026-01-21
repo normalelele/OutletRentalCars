@@ -43,7 +43,7 @@ public class Vehicle : BaseEntity
     public void Reserve()
     {
         if (!IsAvailable())
-            throw new InvalidOperationException("Vehicle is not available for reservation");
+            throw new InvalidOperationException("El vehículo no está disponible para reserva.");
 
         Status = VehicleStatus.Reserved;
     }
